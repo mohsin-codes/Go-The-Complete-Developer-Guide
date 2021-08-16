@@ -1,6 +1,9 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+	"strings"
+)
 
 //Create a new type of "deck"
 //which is a slice of strings
@@ -34,3 +37,10 @@ func deal(d deck, handSize int) (deck, deck) {
 	d = d[handSize:]
 	return d, hand
 }
+
+func (d deck) toString() string {
+	stringSlice := []string(d)
+	stringToWrite := strings.Join(stringSlice, ", ")
+	return stringToWrite
+}
+
