@@ -6,17 +6,20 @@ func main() {
 	//Declaring and initializing maps
 	// 1. First Method
 	colors := map[string]string{
-		"red":   "#ff0000",
-		"green": "#00ff00",
-		"blue":  "#0000ff",
+		"red":    "#ff0000",
+		"green":  "#00ff00",
+		"blue":   "#0000ff",
 		"purple": "#800080",
-		"white": "#ffffff",
-		"black": "#000000",
+		"white":  "#ffffff",
+		"black":  "#000000",
 		"Yellow": "#ffff00",
-		"Pink": "#ffc0cb",
-		"Grey": "#808080",
-
+		"Pink":   "#ffc0cb",
+		"Grey":   "#808080",
 	}
+
+	//using delete function to delete values from map
+	fmt.Println(colors)
+	delete(colors, "Yellow")
 
 	// 2. Second Method
 	// var color map[string]string
@@ -37,8 +40,8 @@ func main() {
 	printMap(colors)
 }
 
-func printMap(c map[string]string){
-	for color, hex := range c{
+func printMap(c map[string]string) {
+	for color, hex := range c {
 		fmt.Println(color, hex)
 	}
 }
