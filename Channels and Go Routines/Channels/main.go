@@ -15,7 +15,8 @@ func main() {
 	}
 
 	for _, link := range links {
-		checkLink(link)
+		//Adding a go routine
+		go checkLink(link)
 	}
 }
 
